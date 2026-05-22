@@ -1,0 +1,50 @@
+/* ========================================
+   スマートフォン・小さい画面向け
+======================================== */
+
+@media (max-width: 768px) {
+
+    .app-container {
+        padding: 16px;
+        align-items: flex-start;
+    }
+
+    .card {
+        margin-top: 24px;
+        padding: 32px 22px;
+        border-radius: 22px;
+    }
+
+    h1 {
+        font-size: 1.85rem;
+    }
+
+    .description {
+        font-size: 0.98rem;
+    }
+
+    .question-area h2 {
+        font-size: 1.2rem;
+    }
+
+    .option-btn {
+        padding: 16px;
+        font-size: 0.95rem;
+    }
+
+    .option-label {
+        width: 28px;
+        height: 28px;
+        margin-right: 8px;
+    }
+
+    .button-area {
+        text-align: center;
+    }
+
+    .primary-btn,
+    .secondary-btn,
+    .next-btn {
+        width: 100%;
+    }
+}

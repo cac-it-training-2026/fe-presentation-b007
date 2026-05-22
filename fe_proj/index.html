@@ -1,27 +1,118 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <title>HTML/CSS 課題一覧</title>
-  <style>
-    body { font-family: sans-serif; padding: 20px; background-color: #f4f7f6; }
-    .menu-container { max-width: 600px; margin: 0 auto; background: #fff; padding: 24px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
-    ul { list-style-type: none; padding: 0; }
-    li { margin-bottom: 10px; }
-    a { text-decoration: none; color: #3498db; font-size: 1.1rem; }
-    a:hover { text-decoration: underline; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>バイオメトリクス認証 確認テスト</title>
+
+    <!-- CSSファイルの読み込み -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
 </head>
 <body>
 
-  <div class="menu-container">
-    <h1>HTML/CSS 課題一覧</h1>
-    <p>以下のリンクから問題に挑戦してください。</p>
-    <ul>
-      <!-- ファイルへのリンク -->
-      <li><a href="question00.html">第0問：HTMLの役割</a></li>
-    </ul>
-  </div>
+    <main class="app-container">
 
+        <!-- 開始画面 -->
+        <section id="start-screen" class="screen active">
+            <div class="card start-card">
+                <p class="label">基本情報IT用語 調査プレゼンテーション演習</p>
+
+                <h1>バイオメトリクス認証<br>確認テスト</h1>
+
+                <p class="description">
+                    指紋認証、顔認証、虹彩認証などの特徴や、
+                    メリット・デメリットについて確認しましょう。
+                </p>
+
+                <button id="start-btn" class="primary-btn">
+                    テストを開始する
+                </button>
+            </div>
+        </section>
+
+        <!-- 問題画面 -->
+        <section id="quiz-screen" class="screen">
+            <div class="card quiz-card">
+
+                <!-- 進捗表示 -->
+                <div class="progress-area">
+                    <div class="progress-info">
+                        <span id="progress-text">1/3</span>
+                    </div>
+
+                    <div class="progress-bar">
+                        <div id="progress-fill" class="progress-fill"></div>
+                    </div>
+                </div>
+
+                <!-- 問題文 -->
+                <div class="question-area">
+                    <p id="question-category" class="question-category">
+                        ここにカテゴリを書く
+                    </p>
+
+                    <h2 id="question-text">
+                        ここに問題を書く
+                    </h2>
+                </div>
+
+                <!-- 選択肢 -->
+                <div id="options-area" class="options-area">
+                    <!-- JavaScriptで選択肢を生成する -->
+                </div>
+
+                <!-- 確認ボタン -->
+                <div class="button-area">
+                    <button id="submit-btn" class="primary-btn" disabled>
+                        回答を確認する
+                    </button>
+                </div>
+
+                <!-- 解説表示 -->
+                <div id="result-area" class="result-area hidden">
+                    <h3 id="result-title">正解 / 不正解</h3>
+
+                    <p id="correct-answer-text" class="correct-answer-text">
+                        正解：ここに正解を書く
+                    </p>
+
+                    <p id="explanation-text" class="explanation-text">
+                        ここに解説を書く
+                    </p>
+
+                    <button id="next-btn" class="next-btn">
+                        次の問題へ
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 終了画面 -->
+        <section id="end-screen" class="screen">
+            <div class="card end-card">
+                <p class="label">テスト完了</p>
+
+                <h1>お疲れ様でした</h1>
+
+                <p class="description">
+                    バイオメトリクス認証に関する確認テストが終了しました。
+                </p>
+
+                <p id="score-text" class="score-text">
+                    正解数：0 / 3
+                </p>
+
+                <button id="restart-btn" class="secondary-btn">
+                    もう一度挑戦する
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- JavaScriptファイルの読み込み -->
+    <script src="js/script.js"></script>
 </body>
 </html>
